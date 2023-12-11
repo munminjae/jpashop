@@ -1,7 +1,8 @@
 spring:
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://localhost:1433;databaseName=jpashop;integratedSecurity=true;encrypt=true;trustServerCertificate=true
+    #url: jdbc:sqlserver://localhost:1433;databaseName=jpashop;encrypt=true;trustServerCertificate=true;
+    url: jdbc:sqlserver://61.83.139.234:1433;DatabaseName=jpashop;encrypt=true;trustServerCertificate=true;
     username: mssqlUser
     password: mmj1213!@
 
