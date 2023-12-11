@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=jpashop;integratedSecurity=true;encrypt=true;trustServerCertificate=true
+    username: mssqlUser
+    password: mmj1213!@
+
+  jpa:
+    hibernate:
+
+      ddl-auto: create        # ???? ??? ? ??? ?? ??
+    properties:
+      hibernate:
+#        show_sql: true         System.out? ??? ??? ??
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug  # logger? ??? ??? ??
