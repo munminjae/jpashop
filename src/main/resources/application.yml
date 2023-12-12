@@ -1,20 +1,22 @@
 spring:
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    #url: jdbc:sqlserver://localhost:1433;databaseName=jpashop;encrypt=true;trustServerCertificate=true;
-    url: jdbc:sqlserver://61.83.139.234:1433;DatabaseName=jpashop;encrypt=true;trustServerCertificate=true;
+    url: jdbc:sqlserver://localhost:1433;databaseName=jpashop;encrypt=true;trustServerCertificate=true;
+    #url: jdbc:sqlserver://175.196.171.214:1433;DatabaseName=jpashop;encrypt=true;trustServerCertificate=true;
     username: mssqlUser
     password: mmj1213!@
 
   jpa:
     hibernate:
 
-      ddl-auto: create        # ???? ??? ? ??? ?? ??
+      ddl-auto: create        #기존 테이블 삭제 후 다시 생성(DROP --> CREATE)
     properties:
       hibernate:
-#        show_sql: true         System.out? ??? ??? ??
+#        show_sql: true         System.out으로 로그 출력
         format_sql: true
 
 logging:
   level:
-    org.hibernate.SQL: debug  # logger? ??? ??? ??
+    org.hibernate.SQL: DEBUG  # logger로 로그 출력
+#   org.hibernate.type: trace   해당 부분은 3 미만의 버젼에서 돌아가는 것 같다.
+    org.hibernate.orm.jdbc.bind: trace  # 파라미터 값을 로그로 출력해줌

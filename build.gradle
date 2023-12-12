@@ -28,6 +28,9 @@ dependencies {
 	//html 파일 수정시 서버 리로드 안해도 반영
 	implementation 'org.springframework.boot:spring-boot-starter'
 
+	//쿼리에 파라미터값을 ?가 아닌 정확하게 출력하는 외부 라이브러리
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
+
 	implementation 'org.springframework.boot:spring-boot-devtools'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
@@ -37,4 +40,9 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+//빌드 시 일반 jar 파일만 생성되도록
+jar {
+	enabled = false
 }
