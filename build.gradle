@@ -31,7 +31,9 @@ dependencies {
 	//쿼리에 파라미터값을 ?가 아닌 정확하게 출력하는 외부 라이브러리
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
 
+	//spring boot가 restartedMain으로
 	implementation 'org.springframework.boot:spring-boot-devtools'
+
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
 	runtimeOnly 'com.h2database:h2'
